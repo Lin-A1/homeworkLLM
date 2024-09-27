@@ -1,3 +1,0 @@
-ollama==0.3.3
-langchain==0.3.1
-langchain-community==0.3.1
