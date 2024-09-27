@@ -21,8 +21,8 @@ pip install -r requirements.txt
 ### - **`fastapi`+`tortoise`**
   待更新
 
-- **`vue3`**
+### - **`vue3`**
   待更新
 
-- **`ollama`+`langchina`**
+### - **`ollama`+`langchina`**
   待更新
