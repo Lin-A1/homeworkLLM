@@ -50,11 +50,12 @@ class CodeReview:
                 if frequency > 5:
                     return False
                 continue
+                continue
 
 
 @review_code_router.post("/")
 async def review_code(request: CodeReviewRequest):
-    code_review = CodeReview(request.model_name, request.require, request.code_content)
+    code_review = CodeReview(request.require, request.code_content)
     result = code_review.review_code()
     if result is False:
         raise HTTPException(status_code=500, detail="Error during code review")
