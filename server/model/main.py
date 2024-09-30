@@ -3,7 +3,7 @@ from codeApi import review_code_router  # 导入代码审查路由
 from reportApi import experiment_review_router
 
 """
-cd server/model-api/
+cd server/model/
 start by `uvicorn main:app --reload`
 """
 
