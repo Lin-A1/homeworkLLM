@@ -2,7 +2,8 @@
 基于ollama+langchain的大模型作业评审任务
 
 ## 模型调配
-- **[main.ipynb](main.ipynb)**
+- **[demo.ipynb](demo.ipynb)**
+- **[demo.py](demo.py)**
 
 
 ## 环境配置
