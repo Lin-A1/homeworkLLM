@@ -135,7 +135,7 @@ result = code_reviewer.review_code()
 print(result)
 
 # 实验报告审查使用示例
-json_path = './data/data.json'
+json_path = 'data/test.json'
 reviewer = ExperimentReportReviewer(model_name="hwllm-qwen2.5", json_path=json_path)
 result = reviewer.review_experiment()
 print(result)
