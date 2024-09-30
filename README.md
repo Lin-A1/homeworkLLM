@@ -7,18 +7,18 @@
 
 ## 环境配置
 - **ollama**
-```
+```shell
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 - **python**
-```
+```shell
 conda create -n yourProjectName python=3.10
 conda activate yourProjectName
 pip install -r requirements.txt
 ```
 
 - **model**
-```
+```shell
 # download model
 
 cd  model/qwen2.5
