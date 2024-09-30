@@ -17,6 +17,16 @@ conda activate yourProjectName
 pip install -r requirements.txt
 ```
 
+- **model**
+```
+# download model
+
+cd  model/qwen2.5
+ollama create hwllm-qwen2.5 -f Modelfile
+cd ../qwen2.5-coder
+ollama create hwllm-qwen2.5-coder -f Modelfile
+```
+
 ## 技术栈
 ### - **`fastapi`+`tortoise`**
   待更新
