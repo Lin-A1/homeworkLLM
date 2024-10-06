@@ -39,7 +39,6 @@ ollama create hwllm-qwen2.5-coder -f Modelfile
 
 ## 技术栈
 ### - **`ollama`+`langchina`**
-![数据流向图.png](data/pic/数据流向图.png)
 #### 1. **Ollama**
 - **模型管理**
   - 支持多种大型语言模型的快速部署和版本控制。
