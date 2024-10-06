@@ -45,7 +45,6 @@ class CodeReview:
                     return False
                 with open('error.log', 'a') as log_file:
                     log_file.write(f"code error occurred: {e}\n")
-                continue
 
 
 class ExperimentReportReviewer:
@@ -115,7 +114,6 @@ class ExperimentReportReviewer:
                     return False
                 with open('error.log', 'a') as log_file:
                     log_file.write(f"Experiment error occurred: {e}\n")
-                continue
 
 
 # 代码审查使用示例

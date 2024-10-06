@@ -1,18 +1,16 @@
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-import warnings
+from fastapi import Request
 from langchain_community.llms import Ollama
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
+import logging
+import warnings
+
+logging.basicConfig(level=logging.INFO)
 warnings.filterwarnings("ignore")
 
 review_code_router = APIRouter()
-
-
-class CodeReviewRequest(BaseModel):
-    require: str
-    code_content: str
 
 
 class CodeReview:
@@ -49,13 +47,13 @@ class CodeReview:
                 frequency += 1
                 if frequency > 5:
                     return False
-                continue
-                continue
 
 
 @review_code_router.post("/")
-async def review_code(request: CodeReviewRequest):
-    code_review = CodeReview(request.require, request.code_content)
+async def review_code(request: Request):
+    logging.info("start review_code")
+    request_data = await request.json()
+    code_review = CodeReview(request_data['require'], request_data['code_content'])
     result = code_review.review_code()
     if result is False:
         raise HTTPException(status_code=500, detail="Error during code review")

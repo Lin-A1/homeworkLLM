@@ -1,19 +1,18 @@
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
+from fastapi import Request
 import json
-import warnings
 from langchain_community.llms import Ollama
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.memory import ConversationBufferMemory
 
+import logging
+import warnings
+
+logging.basicConfig(level=logging.INFO)
 warnings.filterwarnings("ignore")
 
 experiment_review_router = APIRouter()
-
-
-class ExperimentReviewRequest(BaseModel):
-    data: dict
 
 
 class ExperimentReportReviewer:
@@ -87,8 +86,10 @@ class ExperimentReportReviewer:
 
 
 @experiment_review_router.post("/")
-async def review_experiment(request: ExperimentReviewRequest):
-    reviewer = ExperimentReportReviewer(json.loads(request.data))
+async def review_experiment(request: Request):
+    logging.info("start review_code")
+    request_data = await request.json()
+    reviewer = ExperimentReportReviewer(request_data['data'])
     result = reviewer.review_experiment()
     if result is False:
         raise HTTPException(status_code=500, detail="Error during experiment review")
