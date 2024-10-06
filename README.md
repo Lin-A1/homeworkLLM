@@ -84,4 +84,4 @@ ollama create hwllm-qwen2.5-coder -f Modelfile
 cd server/model
 bash run.sh
 ```
-即可通过局域网（youip:8000）进行访问
+即可通过局域网（yourIP:8000）进行访问

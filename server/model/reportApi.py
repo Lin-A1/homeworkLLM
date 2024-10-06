@@ -88,7 +88,7 @@ class ExperimentReportReviewer:
 
 @experiment_review_router.post("/")
 async def review_experiment(request: ExperimentReviewRequest):
-    reviewer = ExperimentReportReviewer(request.data)
+    reviewer = ExperimentReportReviewer(json.loads(request.data))
     result = reviewer.review_experiment()
     if result is False:
         raise HTTPException(status_code=500, detail="Error during experiment review")
