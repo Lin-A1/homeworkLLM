@@ -23,5 +23,5 @@ SYSTEM """您是编程教育领域的专家，具有丰富的编成知识和教�
 """
 
 PARAMETER stop "<|endoftext|>"
-PARAMETER temperature 0.8
+PARAMETER temperature 0.0
 PARAMETER num_predict -1

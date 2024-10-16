@@ -1,5 +1,21 @@
 # homeworkLLM
+
+------
+![cover](data/cover.png)
 基于ollama+langchain的大模型作业评审任务
+
+<div align='center'>
+     <p>
+        <a href='https://github.com/Lin-A1/homeworkLLM/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
+        <img src='https://img.shields.io/github/stars/Lin-A1/homeworkLLM?color=green&style=social' />
+     </p>
+     <p>
+        <img src="https://img.shields.io/badge/python->=3.9.11-blue">
+        <img src="https://img.shields.io/badge/ollama-available-blue">
+        <img src="https://img.shields.io/badge/langchain-available-blue">
+    </p>
+</div>
+
 
 ## 功能特点
 - 智能作业评审
