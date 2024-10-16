@@ -1,7 +1,7 @@
 # homeworkLLM
 
 ------
-![cover](data/cover.jpg)
+![cover](data/cover.png)
 基于ollama+langchain的大模型作业评审任务
 
 <div align='center'>
